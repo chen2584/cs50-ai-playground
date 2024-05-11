@@ -1,5 +1,5 @@
 import sys
-# from pillow import Image, ImageDraw
+# from PIL import Image, ImageDraw
 
 class Node():
     def __init__(self, state, parent, action):
@@ -223,4 +223,4 @@ m.solve()
 print("States Explored:", m.num_explored)
 print("Solution:")
 m.print()
-#m.output_image("maze.png", show_explored=True)
+# m.output_image("maze.png", show_explored=True)
