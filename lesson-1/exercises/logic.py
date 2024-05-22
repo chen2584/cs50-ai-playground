@@ -80,6 +80,9 @@ class And(Sentence):
             (hash(operand for operand in self.operands))
         )
     
+    def add(self, operand: Sentence):
+        self.operands.append(operand)
+    
     def evaluate(self, model):
         return all(operand.evaluate(model) for operand in self.operands)
     
@@ -134,7 +137,7 @@ class Implication(Sentence):
         return set.union(self.left_operand.symbols(), self.right_operand.symbols())
     
 class BiConditional(Sentence):
-    def __init__(self, left_operand: Sentence, right_operand) -> None:
+    def __init__(self, left_operand: Sentence, right_operand: Sentence) -> None:
         self.left_operand = left_operand
         self.right_operand = right_operand
 
