@@ -45,3 +45,11 @@ knowledge.add(Not(adam)) # รู้ว่าไม่ใช่ adam
 knowledge.add(Not(living)) # รู้ว่าไม่ใช่ห้องนั่งเล่น
 
 knowledge_check(knowledge)
+
+# สรุป
+# characters, rooms, weapons ในแต่ละ group ต้องมี true อย่างน้อย 1 ตัว
+# john, adam เป็น false
+# kitchen, living เป็น false
+# knift, scrissor เป็น false (เพราะ chen, toilet เป็น true ทำให้ scrissor ต้องเป็น false เท่านั้น logic connective (OR) ถึงจะเป็น true)
+# john, kitchen, knift, adam, living ต้องเป็น false เสมอ knowledge ถึงจะเป็น true
+# chen, toilet หรือ scrissor ต้องมีอันใดอันนึง หรือมากกว่า 1 เป็น false
