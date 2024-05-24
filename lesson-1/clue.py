@@ -19,7 +19,6 @@ weapons = [knife, revolver, wrench]
 
 symbols = characters + rooms + weapons
 
-
 def check_knowledge(knowledge):
     for symbol in symbols:
         if model_check(knowledge, symbol):
@@ -30,9 +29,9 @@ def check_knowledge(knowledge):
 
 # There must be a person, room, and weapon.
 knowledge = And(
-    Or(mustard, plum, scarlet),
-    Or(ballroom, kitchen, library),
-    Or(knife, revolver, wrench)
+    Or(mustard, plum, scarlet), # false, false, true
+    Or(ballroom, kitchen, library), # false, false, true,
+    Or(knife, revolver, wrench) # true, false, false
 )
 
 # Initial cards
