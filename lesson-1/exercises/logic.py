@@ -42,6 +42,9 @@ class Symbol(Sentence):
             ("symbol", self.name)
         )
     
+    def __repr__(self) -> str:
+        return self.name
+    
     def evaluate(self, model):
         try:
             return model[self.name]
