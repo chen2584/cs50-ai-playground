@@ -131,7 +131,7 @@ class Implication(Sentence):
         )
     
     def evaluate(self, model):
-        return not (self.left_operand.evaluate(model) and not self.right_operand.evaluate(model))
+        return not self.left_operand.evaluate(model) or self.right_operand.evaluate(model)
     
     def formula(self):
         return f"{Sentence.parenthesize(self.left_operand.formula())} => {Sentence.parenthesize(self.right_operand.formula())}"
